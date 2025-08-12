@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from preprocess import Preprocessor
 from pydantic import BaseModel, Field
 import joblib
+import uvicorn
 import pandas as pd
 import numpy as np
 
@@ -34,3 +35,6 @@ def predict(data: PredictInput):
         np.array(prediction_scaled).reshape(-1, 1)
     )
     return {"prediction": float(prediction_original[0, 0])}
+
+if __name__ == "__main__":
+    uvicorn.run("Api:app", host="0.0.0.0", port=8000, reload=True)
