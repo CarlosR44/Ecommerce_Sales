@@ -22,7 +22,7 @@ class PredictInput(BaseModel):
         validate_by_name = True
 
 
-preprocessor = joblib.load("preprocessor.pkl")
+preprocessor = joblib.load("preprocessor_fit.pkl")
 target_scaler = joblib.load('target_scaler.pkl')
 model = joblib.load('modelo_xgb.pkl')
 
