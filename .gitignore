@@ -1,0 +1,15 @@
+.venv/
+env/
+*.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.csv
+*.xlsx
+*.parquet
+*.ipynb
+.history/
+.vscode/
+.idea/
+*.log
